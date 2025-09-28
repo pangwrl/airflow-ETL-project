@@ -8,11 +8,11 @@ The pipeline is scheduled to run daily, and targets weather data for Bangkok, Th
 ## 📦 Project Overview
 
 ### ⚙️ Technologies Used
-    - Apache Airflow (Task orchestration)
-    - Open-Meteo API (Weather data source)
-    - MySQL (Data storage)
-    - Docker (Environment setup)
-    - Python (ETL logic)
+- Apache Airflow (Task orchestration)
+- Open-Meteo API (Weather data source)
+- MySQL (Data storage)
+- Docker (Environment setup)
+- Python (ETL logic)
 
 ### 🔁 DAG Flow
 **1.  Extract**
@@ -27,7 +27,9 @@ The pipeline is scheduled to run daily, and targets weather data for Bangkok, Th
     - Connects to MySQL using Airflow's MySqlHook
     - Creates table weather_data if not exists
     - Inserts transformed data into the table
+
 ![http_conn](docs/api-mysql-dag-graph.png)
+
 ## 📂 Repository Structure
 ```
 airflow-ETL-project/
@@ -51,10 +53,10 @@ airflow-ETL-project/
 
 **2.  Configure Airflow Connections:**
 
-    - open_meteo_api: HTTP connection to https://api.open-meteo.com
+- `open_meteo_api`: HTTP connection to https://api.open-meteo.com
 ![http_conn](docs/http_conn.PNG)
 
-    - my_mysql_conn: MySQL connection pointing to MySQL
+- `my_mysql_conn`: MySQL connection pointing to MySQL
 
 ![mysql_conn](docs/mysql_conn.PNG)
 
