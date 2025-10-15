@@ -16,17 +16,17 @@ The pipeline is scheduled to run daily, and targets weather data for Bangkok, Th
 
 ### 🔁 DAG Flow
 **1.  Extract**
-    - Uses Airflow's HttpHook to call Open-Meteo API
-    - Retrieves current weather data for Bangkok
+- Uses Airflow's HttpHook to call Open-Meteo API
+- Retrieves current weather data for Bangkok
 
 **2.  Transform**
-    - Parses and formats the JSON response
-    - Extracts key fields: temperature, windspeed, wind direction, weather code
+- Parses and formats the JSON response
+- Extracts key fields: temperature, windspeed, wind direction, weather code
 
 **3.  Load**
-    - Connects to MySQL using Airflow's MySqlHook
-    - Creates table weather_data if not exists
-    - Inserts transformed data into the table
+- Connects to MySQL using Airflow's MySqlHook
+- Creates table weather_data if not exists
+- Inserts transformed data into the table
 
 ![http_conn](docs/api-mysql-dag-graph.png)
 
